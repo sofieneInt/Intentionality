@@ -34,7 +34,6 @@ Running the application
 ```
 ng serve
 ```
-- For starter page Navigate to [http://localhost:4200/](http://localhost:4200/)
 - For admin page Navigate to [http://localhost:4200/admin](http://localhost:4200/admin)
 
 Browser Support
@@ -58,11 +57,6 @@ Contribution are always **welcome and recommended**! Here is how:
 - Contributions are only accepted through Github pull requests.
 - Finally, contributed code must work in all supported browsers (see above for browser support).
 
-License
--------
-Angular2-AdminLTE is an open source project by that is licensed under [MIT](http://opensource.org/licenses/MIT).
 
- Credits
--------------
-[AdminLTE.IO](https://adminlte.io/)
+
 
