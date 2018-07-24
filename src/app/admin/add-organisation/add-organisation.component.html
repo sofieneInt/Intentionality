@@ -1,0 +1,56 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Organisation
+      <small>Control panel</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Dashboard</li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+
+        <h3>Ajouter organisation</h3>
+        <div [hidden]="submitted">
+            <form #addOrganisationForm="ngForm">
+        
+                           
+             
+              
+                <div class="form-group">
+                    <label for="nom">nom</label>
+                    <input type="text" class="form-control" id="nom" placeholder=""
+                    required
+                    [(ngModel)]="organisation.nom" name="nom" #nom="ngModel">
+                    <div [hidden]="nom.valid || nom.pristine"
+                         class="alert alert-danger">
+                        required
+                    </div>
+                  </div>
+              
+              
+              <div class="btn-group btn-group-sm">
+                <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+                <button type="button" class="btn btn-dark" (click)="addOrganisation()" [disabled]="!addOrganisationForm.form.valid">Add</button>
+              </div>
+            </form>
+        </div>
+        
+        <div [hidden]="!submitted">
+          <p>Submitted Successfully! -> <span class="badge badge-light">{{organisation.nom}}</span></p>
+          <div class="btn-group btn-group-sm">
+              <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+              <button type="button" class="btn btn-dark" (click)="newOrganisation(); addOrganisationForm.reset()">Continue</button>
+            </div>
+        </div>
+
+
+    </div>
+  </section>
+  </div>
